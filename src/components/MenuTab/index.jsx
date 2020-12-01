@@ -88,14 +88,12 @@ const NavTabs = () => {
             label="Pokémon"
             {...a11yProps(0)}
             onClick={() => history.push("/pokemon")}
-          ></LinkTab>
+          />
           <LinkTab
             label="Rick and Morty"
             {...a11yProps(1)}
             onClick={() => history.push("/rick-and-morty")}
-          >
-            <Link to="/pokemon">Pokémon</Link>
-          </LinkTab>
+          />
           <LinkTab
             label="Favoritos"
             {...a11yProps(2)}
