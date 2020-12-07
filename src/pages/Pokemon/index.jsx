@@ -17,7 +17,12 @@ const useStyles = makeStyles((theme) => ({
   buttons: { minWidth: "15vw", marginTop: "5vh" },
 }));
 
-const Pokemon = () => {
+const Pokemon = ({
+  setPokemonFavorites,
+  pokemonFavorites,
+  rickFavorites,
+  setRickFavorites,
+}) => {
   const [characters, setCharacters] = useState([]);
   const [pageNumber, setPageNumber] = useState(0);
   const classes = useStyles();
@@ -56,7 +61,14 @@ const Pokemon = () => {
   return (
     <>
       <Grid container spacing={2} direction="row">
-        <DisplayCards characters={characters}></DisplayCards>
+        <DisplayCards
+          characters={characters}
+          setPokemonFavorites={setPokemonFavorites}
+          pokemonFavorites={pokemonFavorites}
+          rickFavorites={rickFavorites}
+          setRickFavorites={setRickFavorites}
+          isPokemon
+        ></DisplayCards>
       </Grid>
       <ButtonGroup disableElevation variant="contained" color="primary">
         <Button onClick={() => prevPage()} className={classes.buttons}>

@@ -1,6 +1,5 @@
 import "./App.css";
-import RickAndMorty from "./pages/RickAndMorty/";
-import Pokemon from "./pages/Pokemon/";
+
 import Routes from "./Routes";
 import MenuTab from "./components/MenuTab/";
 

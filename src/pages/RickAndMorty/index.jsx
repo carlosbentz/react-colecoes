@@ -17,7 +17,12 @@ const useStyles = makeStyles((theme) => ({
   buttons: { minWidth: "15vw", marginTop: "5vh" },
 }));
 
-const RickAndMorty = () => {
+const RickAndMorty = ({
+  rickFavorites,
+  setRickFavorites,
+  pokemonFavorites,
+  setPokemonFavorites,
+}) => {
   const [characters, setCharacters] = useState([]);
   const [page, setPage] = useState(
     "https://rickandmortyapi.com/api/character/"
@@ -48,7 +53,14 @@ const RickAndMorty = () => {
   return (
     <div>
       <Grid container spacing={2} direction="row">
-        <DisplayCards characters={characters}></DisplayCards>
+        <DisplayCards
+          characters={characters}
+          rickFavorites={rickFavorites}
+          setRickFavorites={setRickFavorites}
+          pokemonFavorites={pokemonFavorites}
+          setPokemonFavorites={setPokemonFavorites}
+          isRickAndMorty
+        ></DisplayCards>
       </Grid>
       <ButtonGroup disableElevation variant="contained" color="primary">
         <Button
